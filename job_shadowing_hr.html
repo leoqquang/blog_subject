@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <meta charset="UTF-8">
+
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+  <title>Job Shadowing Hour</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/navbar/nav_style.css">
+
+  <script src="/navbar/nav_script.js" defer></script>
+</head>
+
+<body>
+<!--navbar inject another file-->
+<div id="navbar">
+  <script>
+// nav_script.js
+document.addEventListener('DOMContentLoaded', () => {
+  const navbarContainer = document.getElementById('navbar');
+  if (navbarContainer) {
+    fetch('/navbar/navbar.html')
+      .then(res => res.text())
+      .then(data => {
+        navbarContainer.innerHTML = data;
+      })
+      .catch(err => console.error('Failed to load navbar:', err));
+  }
+});
+
+  </script>
+</div>
+
+
+<div class="flex-container">
+    <table>
+    <thead>
+    <th>Name </th>
+    <th>Job Title</th>
+    <th>Hour</th>
+    </thead>
+    <tbody>
+        <tr>
+        <td>Sam Cashion</td>
+        <td>Programmer Analyst Sr.</td>
+        <td>10</td>
+    </tr>
+    <tr>
+        <td>Ken Bodzewski</td>
+        <td>Programmer Analyst II</td>
+        <td>1</td>
+       
+    </tr>
+    <td>Ala Descoste</td>
+    <td>Data Analyst Sr I</td>
+    <td>1</td>
+    <tr>
+        <td>Ryan Small</td>
+        <td>Principle Solution Architecture</td>
+        <td>1</td>
+        
+    </tr>
+    <tr>
+        <td>Matt Crouse</td>
+        <td>Manager Software Development Sr. II</td>
+        <td>1</td>
+    </tr>
+    <tr>
+        <td>Python Workshop</td>
+        <td>Not Applicable</td>
+        <td>1</td>
+    </tr>
+    <tr>
+        <td>GitHub Workshop</td>
+        <td>Not Applicale</td>
+        <td>1</td>
+    </tr>
+    </tbody>
+    <tfoot>
+        <td>Total Hour</td>
+        <td></td>
+        <td></td>
+    </tfoot>
+</table>
+</div>
+
+
+
+
+</div>
+</body>
+
+</html>
