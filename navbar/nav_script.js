@@ -1,32 +1,22 @@
-document.addEventListener("DOMContentLoaded", () => {
-  console.log("DOM fully loaded");
+document.addEventListener('DOMContentLoaded', () => {
+  const navbarContainer = document.getElementById('navbar');
+  if (navbarContainer) {
+    fetch('/navbar/navbar.html')
+      .then(res => res.text())
+      .then(data => {
+        navbarContainer.innerHTML = data;
 
-  const hamburger = document.querySelector(".hamburger");
-  const nav = document.querySelector(".nav");
+        // ✅ Now that navbar is loaded, attach event listener
+        const hamburger = navbarContainer.querySelector('.hamburger');
+        const nav = navbarContainer.querySelector('.nav');
 
-  console.log("hamburger:", hamburger);
-  console.log("nav:", nav);
-
-  if (hamburger && nav) {
-    hamburger.addEventListener("click", () => {
-      console.log("Hamburger clicked");
-      hamburger.classList.toggle("hamburger--open");
-      nav.classList.toggle("nav--open");
-    });
-  } else {
-    console.warn("Elements not found");
+        if (hamburger && nav) {
+          hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('hamburger--open');
+            nav.classList.toggle('nav--open');
+          });
+        }
+      })
+      .catch(err => console.error('Failed to load navbar:', err));
   }
-});
-
-document.addEventListener("DOMContentLoaded", () => {
-  console.log("nav script loaded"); // Debugging log
-  const hamburger = document.querySelector(".hamburger");
-  const nav = document.querySelector(".nav");
-
-  if (hamburger && nav) {
-   hamburger.addEventListener("click", () => {
-    hamburger.classList.toggle("hamburger--open");
-    nav.classList.toggle("nav--open");
-    });
- }
 });

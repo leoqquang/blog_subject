@@ -16,8 +16,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="/navbar/nav_style.css">
+  <link rel="stylesheet" href="/slideShow/StyleShow.css">
 
-  <script src="/navbar/nav_script.js" defer></script>
 </head>
 <body>
 <div id="navbar">
@@ -34,24 +34,15 @@ document.addEventListener('DOMContentLoaded', () => {
       .catch(err => console.error('Failed to load navbar:', err));
   }
 });
-
-document.addEventListener("DOMContentLoaded", () => {
-  console.log("nav script loaded"); // Debugging log
-  const hamburger = document.querySelector(".hamburger");
-  const nav = document.querySelector(".nav");
-
-  if (hamburger && nav) {
-   hamburger.addEventListener("click", () => {
-    hamburger.classList.toggle("hamburger--open");
-    nav.classList.toggle("nav--open");
-    });
- }
-});
-
   </script>
+  
 </div>
+<!--close Nav-->
+<main>
+  
+</main>
 
-
+<script src="/navbar/nav_script.js" defer></script> <!--navbar script -->
 </body>
 
 </html>

@@ -17,7 +17,8 @@
 
   <link rel="stylesheet" href="/navbar/nav_style.css">
 
-  <script src="/navbar/nav_script.js" defer></script>
+  
+  <link rel="stylesheet" href="main.css">
 </head>
 
 <body>
@@ -36,67 +37,67 @@ document.addEventListener('DOMContentLoaded', () => {
       .catch(err => console.error('Failed to load navbar:', err));
   }
 });
-
   </script>
+  <!--close Nav bar file---->
 </div>
 
-
-<div class="flex-container">
-    <table>
-    <thead>
-    <th>Name </th>
-    <th>Job Title</th>
-    <th>Hour</th>
-    </thead>
-    <tbody>
-        <tr>
-        <td>Sam Cashion</td>
-        <td>Programmer Analyst Sr.</td>
-        <td>10</td>
-    </tr>
-    <tr>
-        <td>Ken Bodzewski</td>
-        <td>Programmer Analyst II</td>
-        <td>1</td>
-       
-    </tr>
-    <td>Ala Descoste</td>
-    <td>Data Analyst Sr I</td>
-    <td>1</td>
-    <tr>
-        <td>Ryan Small</td>
-        <td>Principle Solution Architecture</td>
-        <td>1</td>
-        
-    </tr>
-    <tr>
-        <td>Matt Crouse</td>
-        <td>Manager Software Development Sr. II</td>
-        <td>1</td>
-    </tr>
-    <tr>
-        <td>Python Workshop</td>
-        <td>Not Applicable</td>
-        <td>1</td>
-    </tr>
-    <tr>
-        <td>GitHub Workshop</td>
-        <td>Not Applicale</td>
-        <td>1</td>
-    </tr>
-    </tbody>
-    <tfoot>
-        <td>Total Hour</td>
-        <td></td>
-        <td></td>
-    </tfoot>
-</table>
+<h2>Job Shadow Hour</h2>
+<div class="tab">
+  <button data-tab ="Sam">Sam</button>
+  <button data-tab ="Ken">Ken</button>
+  <button data-tab ="Ala">Ala</button>
+  <button data-tab="Ryan">Ryan</button>
+  <button data-tab="Matt">Matt</button>
+  <button data-tab="Python">Python Workshop</button>
+  <button data-tab="GitHub">GitHub</button>
+ 
 </div>
 
+<div id="Sam" class="tabcontent">
+  <h3>Sam Cashion</h3>
+    <h4>Full Stack</h4>
+    <p>Sam is my mentor</p>
+</div>
 
+<div id="Ken" class="tabcontent">
+  <h3>Ken</h3>
+    <h4>Full Stack</h4>
+    <p>Ken is an Program Analysis</p>
+</div>
 
+<div id="Ala" class="tabcontent">
+  <h3>Ala</h3>
+    <h4>Data Analyst</h4>
+    <p>Ala is an Data Analysts,  </p>
+</div>
+
+<div id="Ryan" class="tabcontent">
+  <h3>Ryan</h3>
+    <h4>AI</h4>
+    <p>Ryan is an AI master. I learn much about AI, he </p>
 
 </div>
+<div id="Matt" class="tabcontent">
+  <h3>Matt</h3>
+    <h4>Manager</h4>
+    <p>Matt</p>
+</div>
+<div id="Python" class="tabcontent">
+  <h3>Python</h3>
+   <p>Python commonly use for software developer, data Analysis, task automation,and data visuallization.</p>
+   <p>During the Python workshop, I was able to learn what is Python.
+    Ryan hosting beginner Python. 
+     </p>
+
+</div>
+
+<div id="GitHub" class="tabcontent">
+  <h3>GitHub</h3>
+  <p>GitHub allow users to add, edit, store, merge and collaberate on file code.</p>
+</div>
+<script src="/navbar/nav_script.js" defer></script>
+<script src="main.js"></script>
 </body>
+
 
 </html>

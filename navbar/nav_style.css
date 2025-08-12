@@ -91,23 +91,24 @@ body {
 }
 
 .nav--open {
-  transform: translateX(0) !important;
+  transform: translateX(0);
 }
 
-@media (max-width: 650px) {
+@media (max-width: 675px) {
   .nav {
-    position: fixed;
+    position: absolute;
     top: 60px;
     left: 0;
     width: 100%;
     background-color: rgb(19, 22, 26);
     padding: 10px 0 25px;
-    transform: translateX(-100%);
+    transform: translateX(-100%)!important;
     transition: transform 0.3s ease-in-out;
     z-index: 998;
   }
   .nav--open {
-    transform: translateX(0);
+    transform: translateX(0) !important;
+    z-index: 999;
   }
 
   .nav__list {
@@ -120,3 +121,6 @@ body {
     display: block;
   }
 }
+
+
+

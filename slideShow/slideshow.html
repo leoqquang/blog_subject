@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <meta charset="UTF-8">
+
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+  <title>Blog Subject</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/navbar/nav_style.css">
+  <link rel="stylesheet" href="/slideShow/StyleShow.css">
+
+</head>
+<body>
+<div id="navbar">
+  <script>
+// nav_script.js
+document.addEventListener('DOMContentLoaded', () => {
+  const navbarContainer = document.getElementById('navbar');
+  if (navbarContainer) {
+    fetch('/navbar/navbar.html')
+      .then(res => res.text())
+      .then(data => {
+        navbarContainer.innerHTML = data;
+      })
+      .catch(err => console.error('Failed to load navbar:', err));
+  }
+});
+
+  </script>
+</div>
+<!--slideshow container-->
+<div class="slideshow-container">
+  
+  <!--Full-width images with number and caption text-->
+  <div class="mySlides">
+    <div class="number-text">1 / 21</div>
+      <img src="image/IMG_3421.JPG">
+
+</div>
+
+  <div class="mySlides">
+    <div class="number-text">2 / 21</div>
+      <img src="image/IMG_3409.jpg">
+
+</div>
+
+  <div class="mySlides">
+    <div class="number-text">3 / 21</div>
+      <img src="image/IMG_3404.jpg">
+
+</div>
+
+<div class="mySlides">
+    <div class="number-text">4 / 21</div>
+      <img src="image/IMG_3410.jpg">
+
+</div>
+
+    <div class="mySlides">5 / 21</div>
+      <img src="image/IMG_7103.jpg">
+   </div>
+
+
+  <div class="mySlides">
+    <div class="number-text">6 / 21</div>
+      <img src="image/IMG_7068.jpg">
+
+</div>
+
+  <div class="mySlides">
+    <div class="number-text">7 / 21</div>
+      <img src="image/IMG_7069.JPG">
+
+</div>
+
+  <div class="mySlides">
+    <div class="number-text">8 / 21</div>
+      <img src="image/IMG_7071.jpg">
+
+</div>
+
+  <div class="mySlides">
+    <div class="number-text">9 / 21</div>
+      <img src="image/IMG_7072.jpg">
+
+</div>
+
+  <div class="mySlides">
+    <div class="number-text">10 / 21</div>
+      <img src="image/IMG_7078.jpg">
+
+</div>
+
+  <div class="mySlides">
+    <div class="number-text">11 / 21</div>
+      <img src="image/IMG_7080.jpg">
+
+</div>
+
+  <div class="mySlides">
+    <div class="number-text">12 / 21</div>
+      <img src="image/IMG_7082.jpg">
+</div>
+
+<div class="mySlides">
+    <div class="number-text">13 / 21</div>
+      <img src="image/IMG_7085.jpg">
+</div>
+
+<div class="mySlides">
+    <div class="number-text">14 / 21</div>
+      <img src="image/IMG_7089.jp">
+</div>
+
+ <div class="mySlides">
+    <div class="number-text">15 / 21</div>
+      <img src="image/IMG_7091.jpg">
+
+</div>
+
+ <div class="mySlides">
+    <div class="number-text">16 / 21</div>
+      <img src="image/IMG_7094.jpg">
+</div>
+
+ <div class="mySlides">
+    <div class="number-text">17 / 21</div>
+      <img src="image/IMG_7096.jpg">
+</div>
+
+ <div class="mySlides">
+    <div class="number-text">18 / 21</div>
+      <img src="image/IMG_7098.jpg">
+</div>
+
+ <div class="mySlides">
+    <div class="number-text">19 / 21</div>
+      <img src="image/IMG_7099.jpg">
+</div>
+
+ <div class="mySlides">
+    <div class="number-text">20 / 21</div>
+      <img src="image/IMG_3420.jpg">
+</div>
+  
+<div class="mySlides">
+    <div class="number-text">21 / 21</div>
+      <img src="image/IMG_1419.jpeg">
+</div>
+
+</div>
+<!--Nest and Previous button-->
+<a class="prev" onclick="plusSlides(-1)">&#10094</a> 
+<a class="prev" onclick="plusSlides(1)">&#10095</a>
+<br>
+
+<!--The dot/circle-->
+<div class="circle">
+<span class="dot" onclick="currentSlide(1)"></span>
+<span class="dot" onclick="currentSlide(2)"></span>
+<span class="dot" onclick="currentSlide(3)"></span>
+<span class="dot" onclick="currentSlide(4)"></span>
+<span class="dot" onclick="currentSlide(5)"></span>
+<span class="dot" onclick="currentSlide(6)"></span>
+<span class="dot" onclick="currentSlide(7)"></span>
+<span class="dot" onclick="currentSlide(8)"></span>
+<span class="dot" onclick="currentSlide(9)"></span>
+<span class="dot" onclick="currentSlide(10)"></span>
+<span class="dot" onclick="currentSlide(11)"></span>
+<span class="dot" onclick="currentSlide(12)"></span>
+<span class="dot" onclick="currentSlide(13)"></span>
+<span class="dot" onclick="currentSlide(14)"></span>
+<span class="dot" onclick="currentSlide(15)"></span>
+<span class="dot" onclick="currentSlide(16)"></span>
+<span class="dot" onclick="currentSlide(17)"></span>
+<span class="dot" onclick="currentSlide(18)"></span>
+<span class="dot" onclick="currentSlide(19)"></span>
+<span class="dot" onclick="currentSlide(20)"></span>
+<span class="dot" onclick="currentSlide(21)"></span>
+</div>
+
+<script src="/navbar/nav_script.js" defer></script>
+<script src="slideshow.js"></script>
+</body>
+
+</html>
