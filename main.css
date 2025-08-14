@@ -1,3 +1,7 @@
+
+ul {
+    display: none;
+}
 /* Style the Tab */
 .tab {
     overflow: hidden;
