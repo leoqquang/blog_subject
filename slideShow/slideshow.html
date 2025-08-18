@@ -1,190 +1,172 @@
 <!DOCTYPE html>
-
 <html lang="en">
-<meta charset="UTF-8">
-
-<meta http-equiv="X-UA-Compatible" content="chrome=1">
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <head>
-  <title>Blog Subject</title>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="/navbar/nav_style.css">
-  <link rel="stylesheet" href="/slideShow/StyleShow.css">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image slider</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/navbar/nav_style.css">
+    <link rel="stylesheet" href="StyleSlide.css">
 </head>
 
 <body>
-  <div id="navbar">
-    <script>
-      // nav_script.js
-      document.addEventListener('DOMContentLoaded', () => {
-        const navbarContainer = document.getElementById('navbar');
-        if (navbarContainer) {
-          fetch('/navbar/navbar.html')
-            .then(res => res.text())
-            .then(data => {
-              navbarContainer.innerHTML = data;
-            })
-            .catch(err => console.error('Failed to load navbar:', err));
-        }
-      });
-
-    </script>
-  </div>
-  
-  <!--slideshow container-->
-  <div class="slideshow-container">
-
-    <!--Full-width images with number and caption text-->
-    <div class="mySlides">
-      <div class="number-text">1 / 21</div>
-      <img src="image/IMG_3421.JPG">
-
+    <div id="navbar">
+        <script>
+            // nav_script.js
+            document.addEventListener('DOMContentLoaded', () => {
+                const navbarContainer = document.getElementById('navbar');
+                if (navbarContainer) {
+                    fetch('/navbar/navbar.html')
+                        .then(res => res.text())
+                        .then(data => {
+                            navbarContainer.innerHTML = data;
+                        })
+                        .catch(err => console.error('Failed to load navbar:', err));
+                }
+            });
+        </script>
     </div>
 
-    <div class="mySlides">
-      <div class="number-text">2 / 21</div>
-      <img src="image/IMG_3409.jpg">
+    <div class="slider">
+        <input type="radio" name="radio-btn" id="radio1" checked>
+        <input type="radio" name="radio-btn" id="radio2">
+        <input type="radio" name="radio-btn" id="radio3">
+        <input type="radio" name="radio-btn" id="radio4">
+        <input type="radio" name="radio-btn" id="radio5">
+        <input type="radio" name="radio-btn" id="radio6">
+        <input type="radio" name="radio-btn" id="radio7">
+        <input type="radio" name="radio-btn" id="radio8">
+        <input type="radio" name="radio-btn" id="radio9">
+        <input type="radio" name="radio-btn" id="radio10">
+        <input type="radio" name="radio-btn" id="radio11">
+        <input type="radio" name="radio-btn" id="radio12">
+        <input type="radio" name="radio-btn" id="radio13">
+        <input type="radio" name="radio-btn" id="radio14">
+        <input type="radio" name="radio-btn" id="radio15">
+        <input type="radio" name="radio-btn" id="radio16">
+        <input type="radio" name="radio-btn" id="radio17">
+        <input type="radio" name="radio-btn" id="radio18">
+        <input type="radio" name="radio-btn" id="radio19">
+        <input type="radio" name="radio-btn" id="radio20">
+        <input type="radio" name="radio-btn" id="radio21">
+        <!-- Slide images -->
+        <div class="slides" id="slide-track">
 
+            <div class="myslide">
+                <img src="image/Img_1.jpg" alt="Image 1">
+            </div>
+            <div class="myslide">
+                <img src="image/Img_2.jpg" alt="Image 2">
+            </div>
+            <div class="myslide">
+                <img src="image/Img_3.jpg" alt="Image 3">
+            </div>
+
+            <div class="myslide">
+                <img src="image/Img_4.jpg" alt="Image 4">
+            </div>
+
+            <div class="myslide">
+                <img src="image/Img_5.jpg" alt="Image 5">
+            </div>
+
+            <div class="myslide">
+                <img src="image/Img_6.jpg" alt="Image 6">
+            </div>
+
+            <div class="myslide">
+                <img src="image/Img_7.jpg" alt="Image 7">
+            </div>
+
+            <div class="myslide">
+                <img src="image/Img_8.jpg" alt="Image 8">
+            </div>
+
+            <div class="myslide">
+                <img src="image/Img_9.jpg" alt="Image 9">
+            </div>
+
+            <div class="myslide">
+                <img src="image/Img_10.jpg" alt="Image 10">
+            </div>
+
+            <div class="myslide">
+                <img src="image/Img_11.jpg" alt="Image 11">
+            </div>
+
+            <div class="myslide">
+                <img src="image/Img_12.jpg" alt="Image 12">
+            </div>
+
+            <div class="myslide">
+                <img src="image/Img_13.jpg" alt="Image 13">
+            </div>
+
+            <div class="myslide">
+                <img src="image/Img_14.jpg" alt="Image 14">
+            </div>
+
+            <div class="myslide">
+                <img src="image/Img_15.jpg" alt="Image 15">
+            </div>
+
+            <div class="myslide">
+                <img src="image/Img_16.jpg" alt="Image 16">
+            </div>
+
+            <div class="myslide">
+                <img src="image/Img_17.jpg" alt="Image 17">
+            </div>
+
+            <div class="myslide">
+                <img src="image/Img_18.jpg" alt="Image 18">
+            </div>
+
+            <div class="myslide">
+                <img src="image/Img_19.jpg" alt="Image 19">
+            </div>
+
+            <div class="myslide">
+                <img src="image/Img_20.jpg" alt="Image 20">
+            </div>
+
+            <div class="myslide">
+                <img src="image/Img_21.jpg" alt="Image 21">
+            </div>
+        </div>
+        <!-- Manual navigation -->
+        <div class="navigation-manual">
+            <!-- Creates 21 manual buttons -->
+            <!-- You can optionally hide some if it looks too crowded -->
+            <label for="radio1" class="manual-btn"></label>
+            <label for="radio2" class="manual-btn"></label>
+            <label for="radio3" class="manual-btn"></label>
+            <label for="radio4" class="manual-btn"></label>
+            <label for="radio5" class="manual-btn"></label>
+            <label for="radio6" class="manual-btn"></label>
+            <label for="radio7" class="manual-btn"></label>
+            <label for="radio8" class="manual-btn"></label>
+            <label for="radio9" class="manual-btn"></label>
+            <label for="radio10" class="manual-btn"></label>
+            <label for="radio11" class="manual-btn"></label>
+            <label for="radio12" class="manual-btn"></label>
+            <label for="radio13" class="manual-btn"></label>
+            <label for="radio14" class="manual-btn"></label>
+            <label for="radio15" class="manual-btn"></label>
+            <label for="radio16" class="manual-btn"></label>
+            <label for="radio17" class="manual-btn"></label>
+            <label for="radio18" class="manual-btn"></label>
+            <label for="radio19" class="manual-btn"></label>
+            <label for="radio20" class="manual-btn"></label>
+            <label for="radio21" class="manual-btn"></label>
+        </div>
     </div>
-
-    <div class="mySlides">
-      <div class="number-text">3 / 21</div>
-      <img src="image/IMG_3404.jpg">
-    </div>
-
-    <div class="mySlides">
-      <div class="number-text">4 / 21</div>
-      <img src="image/IMG_3410.jpg">
-    </div>
-
-    <div class="mySlides">
-      <div class="number-text">5 / 21</div>
-      <img src="image/IMG_7103.jpg">
-    </div>
-
-  <div class="mySlides">
-    <div class="number-text">6 / 21</div>
-    <img src="image/IMG_7068.jpg">
-  </div>
-
-  <div class="mySlides">
-    <div class="number-text">7 / 21</div>
-    <img src="image/IMG_7069.JPG">
-  </div>
-
-  <div class="mySlides">
-    <div class="number-text">8 / 21</div>
-    <img src="image/IMG_7071.jpg">
-  </div>
-
-  <div class="mySlides">
-    <div class="number-text">9 / 21</div>
-    <img src="image/IMG_7072.jpg">
-  </div>
-
-  <div class="mySlides">
-    <div class="number-text">10 / 21</div>
-    <img src="image/IMG_7078.jpg">
-  </div>
-
-  <div class="mySlides">
-    <div class="number-text">11 / 21</div>
-    <img src="image/IMG_7080.jpg">
-  </div>
-
-  <div class="mySlides">
-    <div class="number-text">12 / 21</div>
-    <img src="image/IMG_7082.jpg">
-  </div>
-
-  <div class="mySlides">
-    <div class="number-text">13 / 21</div>
-    <img src="image/IMG_7085.jpg">
-  </div>
-
-  <div class="mySlides">
-    <div class="number-text">14 / 21</div>
-    <img src="image/IMG_7089.jp">
-  </div>
-
-  <div class="mySlides">
-    <div class="number-text">15 / 21</div>
-    <img src="image/IMG_7091.jpg">
-
-  </div>
-
-  <div class="mySlides">
-    <div class="number-text">16 / 21</div>
-    <img src="image/IMG_7094.jpg">
-  </div>
-
-  <div class="mySlides">
-    <div class="number-text">17 / 21</div>
-    <img src="image/IMG_7096.jpg">
-  </div>
-
-  <div class="mySlides">
-    <div class="number-text">18 / 21</div>
-    <img src="image/IMG_7098.jpg">
-  </div>
-
-  <div class="mySlides">
-    <div class="number-text">19 / 21</div>
-    <img src="image/IMG_7099.jpg">
-  </div>
-
-  <div class="mySlides">
-    <div class="number-text">20 / 21</div>
-    <img src="image/IMG_3420.jpg">
-  </div>
-
-  <div class="mySlides">
-    <div class="number-text">21 / 21</div>
-    <img src="image/IMG_1419.jpeg">
-  </div>
-
-</div>
-  <!--Nest and Previous button-->
-  <a class="prev" onclick="plusSlides(-1)">&#10094</a>
-  <a class="prev" onclick="plusSlides(1)">&#10095</a>
-  <br>
-
-  <!--The dot/circle-->
-  <div class="circle">
-    <span class="dot" onclick="currentSlide(1)"></span>
-    <span class="dot" onclick="currentSlide(2)"></span>
-    <span class="dot" onclick="currentSlide(3)"></span>
-    <span class="dot" onclick="currentSlide(4)"></span>
-    <span class="dot" onclick="currentSlide(5)"></span>
-    <span class="dot" onclick="currentSlide(6)"></span>
-    <span class="dot" onclick="currentSlide(7)"></span>
-    <span class="dot" onclick="currentSlide(8)"></span>
-    <span class="dot" onclick="currentSlide(9)"></span>
-    <span class="dot" onclick="currentSlide(10)"></span>
-    <span class="dot" onclick="currentSlide(11)"></span>
-    <span class="dot" onclick="currentSlide(12)"></span>
-    <span class="dot" onclick="currentSlide(13)"></span>
-    <span class="dot" onclick="currentSlide(14)"></span>
-    <span class="dot" onclick="currentSlide(15)"></span>
-    <span class="dot" onclick="currentSlide(16)"></span>
-    <span class="dot" onclick="currentSlide(17)"></span>
-    <span class="dot" onclick="currentSlide(18)"></span>
-    <span class="dot" onclick="currentSlide(19)"></span>
-    <span class="dot" onclick="currentSlide(20)"></span>
-    <span class="dot" onclick="currentSlide(21)"></span>
-  </div>
-
-  <script src="/navbar/nav_script.js" defer></script>
-  <script src="slideshow.js"></script>
+    <script src="/navbar/nav_script.js" defer></script>
+    >
+    <script src="SlideShowJS.js"></script>
 </body>
 
 </html>
