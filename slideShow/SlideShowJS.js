@@ -1,76 +1,50 @@
-document.addEventListener('DOMContentLoaded', () => {
-  const slideTrack = document.getElementById('slide-track');
-  const slides = document.querySelectorAll('.myslide');
-  const radios = document.querySelectorAll('input[name="radio-btn"]');
-  const buttons = document.querySelectorAll('.manual-btn');
-  const slider = document.querySelector('.slider');
+document.addEventListener('DOMContentLoaded', function () {
+  const image = document.getElementById('slide-image');
+  const nextBtn = document.getElementById('nextBtn');
+  const prevBtn = document.getElementById('prevBtn');
+  const slideshowContainer = document.querySelector('.slideshow-container');
 
-  let currentSlide = 0;
-  const totalSlides = slides.length;
+  // ✅ Your actual image filenames
+  const imageFilenames = [
+    "Img_1.JPG", "Img_2.jpg", "Img_3.jpg", "Img_4.jpg", "Img_5.jpg",
+    "Img_6.jpg", "Img_7.jpg", "Img_8.jpg", "Img_9.jpg", "Img_10.jpg",
+    "Img_11.JPG", "Img_12.jpg", "Img_13.jpg", "Img_14.jpg", "Img_15.jpg",
+    "Img_16.jpg", "Img_17.jpg", "Img_18.jpg", "Img_19.JPG", "Img_20.jpeg",
+    "Img_21.JPG"
+  ];
 
-  // Set dynamic width
-  slideTrack.style.width = `${totalSlides * 100}%`;
+  let currentIndex = 0;
+  let autoplayInterval;
 
-  // Manual navigation
-  radios.forEach((radio, index) => {
-    radio.addEventListener('change', () => {
-      currentSlide = index;
-      updateSlide();
-      resetAutoplay();
-    });
-  });
-
-  // Update slide position and button state
-  function updateSlide() {
-    slideTrack.style.transform = `translateX(-${currentSlide * 100}%)`;
-    if (radios[currentSlide]) radios[currentSlide].checked = true;
-    buttons.forEach(btn => btn.classList.remove('active'));
-    if (buttons[currentSlide]) buttons[currentSlide].classList.add('active');
+  function updateImage() {
+    image.src = `images/${imageFilenames[currentIndex]}`;
+    console.log("Now showing:", image.src);
   }
 
-  // Autoplay
-  let autoplay = setInterval(() => {
-    currentSlide = (currentSlide + 1) % totalSlides;
-    updateSlide();
-  }, 5000);
-
-  function resetAutoplay() {
-    clearInterval(autoplay);
-    autoplay = setInterval(() => {
-      currentSlide = (currentSlide + 1) % totalSlides;
-      updateSlide();
-    }, 5000);
+  function showNextImage() {
+    currentIndex = (currentIndex + 1) % imageFilenames.length;
+    updateImage();
   }
 
-  // Swipe gestures
-  let startX = 0;
-  let endX = 0;
-
-  slider.addEventListener('touchstart', (e) => {
-    startX = e.touches[0].clientX;
-    clearInterval(autoplay);
-  });
-
-  slider.addEventListener('touchend', (e) => {
-    endX = e.changedTouches[0].clientX;
-    handleSwipe();
-    resetAutoplay();
-  });
-
-  function handleSwipe() {
-    const threshold = 50;
-    const distance = endX - startX;
-
-    if (Math.abs(distance) > threshold) {
-      if (distance < 0) {
-        currentSlide = (currentSlide + 1) % totalSlides;
-      } else {
-        currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
-      }
-      updateSlide();
-    }
+  function showPrevImage() {
+    currentIndex = (currentIndex - 1 + imageFilenames.length) % imageFilenames.length;
+    updateImage();
   }
 
-  // Initial state
-  updateSlide();
+  function startAutoplay() {
+    autoplayInterval = setInterval(showNextImage, 3000);
+  }
+
+  function stopAutoplay() {
+    clearInterval(autoplayInterval);
+  }
+
+  nextBtn.addEventListener('click', showNextImage);
+  prevBtn.addEventListener('click', showPrevImage);
+
+  slideshowContainer.addEventListener('mouseenter', stopAutoplay);
+  slideshowContainer.addEventListener('mouseleave', startAutoplay);
+
+  updateImage();
+  startAutoplay();
 });
