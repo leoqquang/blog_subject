@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const prevBtn = document.getElementById('prevBtn');
   const slideshowContainer = document.querySelector('.slideshow-container');
 
-  // ✅ Your actual image filenames
+
   const imageFilenames = [
     "Img_1.JPG", "Img_2.jpg", "Img_3.jpg", "Img_4.jpg", "Img_5.jpg",
     "Img_6.jpg", "Img_7.jpg", "Img_8.jpg", "Img_9.jpg", "Img_10.jpg",
