@@ -1,3 +1,12 @@
+.lexend-<uniquifier> {
+  font-family: "Lexend", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+body {
+    font-family: "Lexend", sans-serif;
+}
 
 ul {
     display: none;
@@ -23,12 +32,12 @@ ul {
 
 /*Change background color of button on hover */
 .tab button:hover {
-    background-color:#ddd;
+    background-color:#bddcf0;
 }
 
 /*Create an active/current tablink class */
 .tab button:active {
-    background-color: #ccc;
+    background-color: #b8d3e4;
 }
 /*Style the tab content */
 .tabcontent {
